@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".CookieActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/noto_sans_kr_bold"
+        android:text="쿠키충전"
+        android:textColor="@color/black"
+        android:textSize="26dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:text="아래 계좌로 입금하시면 관리자가 확인 후 충전됩니다."
+        android:textColor="@color/black"
+        android:textSize="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f2f2f2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.8"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:text="관리자 계좌"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:text="00은행 000-000-000 홍길동"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:text="결제 금액"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/noto_sans_kr_bold"
+                    android:gravity="right"
+                    android:text="충전 쿠키"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/cookie_group"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/cookie_5000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:text="5,000원" />
+
+                    <RadioButton
+                        android:id="@+id/cookie_10000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:text="10,000원" />
+
+                    <RadioButton
+                        android:id="@+id/cookie_30000"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:layout_height="wrap_content"
+                        android:text="30,000원" />
+
+                    <RadioButton
+                        android:id="@+id/cookie_50000"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:layout_height="wrap_content"
+                        android:text="50,000원" />
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/cookie_input"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:fontFamily="@font/noto_sans_kr_bold"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="직접입력" />-->
+
+
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5 쿠키"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:textColor="@color/black"
+                        android:gravity="right"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10 쿠키"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:textColor="@color/black"
+                        android:gravity="right"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="30 쿠키"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:textColor="@color/black"
+                        android:gravity="right"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="50 쿠키"
+                        android:fontFamily="@font/noto_sans_kr_bold"
+                        android:textColor="@color/black"
+                        android:gravity="right"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="10dp"
+                        />
+<!--                   <EditText-->
+<!--                       android:id="@+id/cookie_cashAmount_input"-->
+<!--                       android:enabled="false"-->
+<!--                       android:gravity="center"-->
+<!--                       android:layout_marginRight="10dp"-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_height="wrap_content"-->
+<!--                       android:hint="직접입력"-->
+<!--                       android:textSize="15dp"-->
+<!--                       android:inputType="number"-->
+<!--                       android:textColor="@color/black"-->
+<!--                       android:fontFamily="@font/noto_sans_kr_bold"-->
+<!--                       android:background="@drawable/white_text"-->
+<!--                       />-->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="결제금액을 확인해주세요" />
+
+
+    <TextView
+        android:id="@+id/cookie_cashAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/noto_sans_kr_bold"
+        android:text=""
+        android:hint="금액을 선택해주세요"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/noto_sans_kr_bold"
+        android:text="※ 가입시 입력하신 이름으로 입금이 되지 않으면 쿠키충전이 불가능합니다"
+        android:textColor="@color/black"
+        android:textSize="11dp" />
+
+    <Button
+        android:id="@+id/cookie_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#f49b25"
+        android:fontFamily="@font/noto_sans_kr_bold"
+        android:text="쿠키 충전하기"
+        android:textSize="15dp" />
+</LinearLayout>
