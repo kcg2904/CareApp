@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    >
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1.5"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/logo_color"
+        android:gravity="center"
+        />
     <LinearLayout
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="0dp"
+        android:layout_weight="8.5"
+        android:layout_height="50dp"
         android:orientation="horizontal"
+        android:id="@+id/menu1"
+        android:background="@color/white"
         >
+
         <TextView
-            android:id="@+id/main_bar"
+            android:id="@+id/home_menu"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="메인"
-            android:textSize="20dp"
+            android:layout_weight="1.3"
+            android:text="일자리찾기"
+            android:textSize="15dp"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:background="#F44336"
-            />
-        <TextView
-            android:id="@+id/list_bar"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="목록보기"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:background="#E91E63"
-            />
-        <TextView
-            android:id="@+id/upload_bar"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="등록하기"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:background="#FF5722"
-            />
-        <TextView
-            android:id="@+id/userinfo_bar"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="내정보"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:background="#FFC107"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/noto_sans_kr_medium"
             />
 
+
+        <TextView
+            android:id="@+id/Caregiver_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:text="요양사찾기"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/notosanskr_medium"
+            />
+        <TextView
+            android:id="@+id/Mypage_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:text="마이페이지"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            />
     </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>

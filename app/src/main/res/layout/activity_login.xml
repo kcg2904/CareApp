@@ -1,80 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".LoginActivity">
+
+    <include layout="@layout/toolbar"/>
+
     <TextView
         android:id="@+id/title"
-        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="25dp"
         android:text="로그인"
-        android:gravity="center"
-        android:textSize="40dp"
-        android:padding="16dp"
-        />
-    <View
+        android:textColor="@color/black"
+        android:fontFamily="@font/noto_sans_kr_bold"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/user_id"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#8A7E7E"
-        android:layout_below="@id/title"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/loginbox"
+        android:textColor="@color/black"
+        android:fontFamily="@font/noto_sans_kr_light"
+        android:hint="아이디 입력"
+        android:inputType="text"
+        android:maxLength="15"
+        android:paddingLeft="16dp" />
+
+    <EditText
+        android:id="@+id/user_pw"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/loginbox"
+        android:fontFamily="@font/noto_sans_kr_light"
+        android:hint="비밀번호 입력"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:paddingLeft="16dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+    <TextView
+        android:layout_marginStart="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:textColor="@color/black"
+        android:text="로그인 선택"
+        android:textSize="16dp"
         />
-        <EditText
-            android:layout_above="@id/user_pw"
-            android:id="@+id/user_id"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            android:layout_width="match_parent"
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/personal_login"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="아이디 입력"
-            android:gravity="center"
-            android:background="#fff"
-            android:padding="16dp"
+            android:textColor="@color/black"
+            android:text="개인"
+            android:checked="true"
             />
+        <RadioButton
+            android:id="@+id/company_login"
+            android:layout_marginStart="25dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기업"/>
+    </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_pw"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="25dp"
+        android:backgroundTint="#f49b25"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:text="로그인"
+        android:textSize="20dp" />
 
-        <EditText
-            android:layout_centerInParent="true"
-            android:id="@+id/user_pw"
-            android:layout_margin="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="비밀번호 입력"
-            android:gravity="center"
-            android:inputType="textPassword"
-            android:background="#fff"
-            android:padding="16dp"
-            />
-        <Button
-            android:id="@+id/login_button"
-            android:layout_width="300dp"
-            android:layout_centerInParent="true"
-            android:layout_height="60dp"
-            android:layout_margin="16dp"
-            android:text="로그인"
-            android:textSize="16dp"
-            android:layout_below="@id/user_pw"
-            />
-<!--    <ImageButton-->
-<!--        android:id="@+id/kakao_login_button"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:src="@drawable/kakao_login_medium_wide"-->
-<!--        android:layout_below="@+id/login_button"-->
-<!--        android:background="#fff"-->
-<!--        />-->
-<!--    <com.google.android.gms.common.SignInButton-->
-<!--        android:id="@+id/google_login_button"-->
-<!--        android:layout_height="70dp"-->
+<!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
-<!--        android:layout_marginRight="50dp"-->
-<!--        android:layout_marginLeft="50dp"-->
-<!--        android:layout_below="@+id/kakao_login_button"-->
-<!--        />-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
 
-    <include layout="@layout/menubar" />
-</RelativeLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/find_id"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:fontFamily="@font/noto_sans_kr_regular"-->
+<!--            android:gravity="center"-->
+<!--            android:text="아이디찾기"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16dp" />-->
+
+<!--        <View-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="#615D5D" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/find_pass"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:fontFamily="@font/noto_sans_kr_regular"-->
+<!--            android:gravity="center"-->
+<!--            android:text="비밀번호 찾기"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16dp" />-->
+<!--    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="아이디가 없으신가요?"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        />
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/kakao_login_button"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_marginBottom="16dp"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:src="@drawable/kakao_login_medium_wide"-->
+    <!--        android:layout_below="@+id/login_button"-->
+    <!--        android:background="#fff"-->
+    <!--        />-->
+    <!--    <com.google.android.gms.common.SignInButton-->
+    <!--        android:id="@+id/google_login_button"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_marginRight="50dp"-->
+    <!--        android:layout_marginLeft="50dp"-->
+    <!--        android:layout_below="@+id/kakao_login_button"-->
+    <!--        />-->
+
+
+</LinearLayout>
